@@ -14,7 +14,7 @@ public class GameMain extends JPanel implements MouseListener{
 
 	//constants for dimensions used for drawing
 	//cell width and height
-	public static final int CELL_SIZE = 100;
+	public static final int CELL_SIZE = 200;
 	//drawing canvas
 	public static final int CANVAS_WIDTH = CELL_SIZE * COLS;
 	public static final int CANVAS_HEIGHT = CELL_SIZE * ROWS;
@@ -142,13 +142,17 @@ public class GameMain extends JPanel implements MouseListener{
 			if(board.hasWon(thePlayer, row, col)) {
 				
 				// TODO: check which player has won and update the currentstate to the appropriate gamestate for the winner
-
-				
+		        // Check which player has won and update the current state to the appropriate game state
+		        if (thePlayer == Player.Cross) {
+		            currentState = GameState.Cross_won;
+		        } else {
+		            currentState = GameState.Nought_won;
+		        }
 			} else 
 				if (board.isDraw ()) {
 					
-				// TODO: set the currentstate to the draw gamestate
-
+				// TODO: set the currentstate to the draw gamestate			        
+			        currentState = GameState.Draw;// Set the current state to the draw game state
 			}
 			//otherwise no change to current state of playing
 		}
