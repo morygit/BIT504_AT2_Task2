@@ -1,4 +1,13 @@
-
+/**
+* Author: Morteza Minarokh
+* Student ID: 5087851
+* Assessment number: BIT504 Assessment 2 
+* This program allows users to play the game of Tic-Tac-Toe,
+* Players can take turns marking the spaces in a grid,
+* aiming to form a horizontal, vertical, or diagonal row of their marks (X or O) to win the game.
+* The program tracks game outcomes, such as wins, draws, and the current player's turn.
+* It provides options to restart the game, view the game board, and exit the program.
+*/
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
